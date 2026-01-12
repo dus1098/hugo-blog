@@ -1,0 +1,14 @@
+baseURL = 'https://dus1098.github.io/'
+languageCode = "ko-kr"
+title = 'My New Hugo Site'
+theme = "PaperMod"
+
+[[menu.main]]
+name = "여행"
+url = "/travel/"
+weight = 2
+
+[[menu.main]]
+name = "개발"
+url = "/dev/"
+weight = 1

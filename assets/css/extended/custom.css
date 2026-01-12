@@ -1,0 +1,66 @@
+/* ---------- Layout: readable but wide enough ---------- */
+.main {
+  max-width: 920px; /* 기본보다 넓게 */
+}
+
+/* ---------- Typography: Korean-friendly ---------- */
+.post-content {
+  line-height: 1.85;
+  font-size: 1.03rem;
+  word-break: keep-all;
+}
+
+/* ---------- Headings spacing ---------- */
+.post-content h2 {
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+}
+.post-content h3 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ---------- Images: travel-friendly ---------- */
+.post-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  margin: 1.6rem auto;
+}
+
+/* 캡션 느낌 (이미지 바로 아래 문단이 짧으면 캡션처럼 보이게) */
+.post-content img + em,
+.post-content img + p > em {
+  display: block;
+  text-align: center;
+  opacity: 0.75;
+  margin-top: -1rem;
+  margin-bottom: 1.6rem;
+  font-size: 0.95rem;
+}
+
+/* ---------- Code blocks ---------- */
+.post-content pre code {
+  font-size: 0.95rem;
+}
+
+/* ---------- Tables (tips often use tables) ---------- */
+.post-content table {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+}
+
+/* ---------- Callout boxes (Tip / Note) ---------- */
+.callout {
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  margin: 1.4rem 0;
+  border: 1px solid rgba(127,127,127,0.25);
+  background: rgba(127,127,127,0.08);
+}
+.callout-title {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
