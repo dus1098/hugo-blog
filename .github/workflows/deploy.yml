@@ -1,0 +1,36 @@
+name: Deploy Hugo to GitHub Pages Repo
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source (with submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy to dus1098.github.io
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          external_repository: dus1098/dus1098.github.io
+          publish_dir: ./public
+          publish_branch: main
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
