@@ -1,7 +1,11 @@
 baseURL = 'https://dus1098.github.io/'
 languageCode = "ko-kr"
-title = 'My New Hugo Site'
+title = '몰래하는 블로그'
 theme = "PaperMod"
+
+[params]
+defaultTheme = "light"          # auto면 환경마다 달라짐
+disableThemeToggle = true
 
 [[menu.main]]
 name = "여행"
