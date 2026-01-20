@@ -1,0 +1,24 @@
+/* 카드 전체 클릭 가능하게: 투명 링크를 카드 위에 덮음 */
+.post-entry-clickable{
+  position: relative;
+}
+
+.post-entry-clickable .entry-link{
+  position: absolute;
+  inset: 0;              /* top/right/bottom/left: 0 */
+  z-index: 1;
+  border-radius: inherit;
+}
+
+/* 카드 내부의 실제 링크/버튼은 오버레이 위로 올려서 클릭 가능 유지 */
+.post-entry-clickable .entry-header a,
+.post-entry-clickable .dev-badge{
+  position: relative;
+  z-index: 2;
+}
+
+/* 마우스 올릴 때 “클릭 가능” 느낌 */
+.post-entry-clickable:hover{
+  transform: translateY(-1px);
+  transition: transform .12s ease;
+}

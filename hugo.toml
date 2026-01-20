@@ -1,18 +1,39 @@
 baseURL = 'https://dus1098.github.io/'
+publishDir = "public"
 languageCode = "ko-kr"
-title = '몰래하는 블로그'
+title = '무너로그'
 theme = "PaperMod"
 
 [params]
 defaultTheme = "light"          # auto면 환경마다 달라짐
-disableThemeToggle = true
+disableThemeToggle = false
 
+#개발 메뉴
+[[menu.main]]
+name = "개발"
+url = "/dev/"
+weight = 1
+
+[[menu.main]]
+name = "C#"
+url = "/dev/csharp/"
+parent = "개발"
+weight = 1
+
+[[menu.main]]
+name = "Hugo"
+url = "/dev/hugo/"
+parent = "개발"
+weight = 2
+
+#여행 메뉴
 [[menu.main]]
 name = "여행"
 url = "/travel/"
 weight = 2
 
+#기타
 [[menu.main]]
-name = "개발"
-url = "/dev/"
-weight = 1
+name = "기타"
+url = "/notes/"
+weight = 3
