@@ -21,4 +21,5 @@
 .post-entry-clickable:hover{
   transform: translateY(-1px);
   transition: transform .12s ease;
+  background-color: rgba(0, 0, 0, 0.6); /* 아주 연한 배경 강조 */
 }

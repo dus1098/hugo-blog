@@ -64,3 +64,10 @@
   font-weight: 700;
   margin-bottom: 0.35rem;
 }
+
+/* dev 배지 링크가 카드 오버레이(.entry-link)보다 위로 올라오게 */
+.post-entry .dev-badge {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+}

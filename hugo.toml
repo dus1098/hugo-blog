@@ -2,38 +2,69 @@ baseURL = 'https://dus1098.github.io/'
 publishDir = "public"
 languageCode = "ko-kr"
 title = '무너로그'
-theme = "PaperMod"
+theme = "hugo-theme-stack"
 
 [params]
-defaultTheme = "light"          # auto면 환경마다 달라짐
+defaultTheme = "dark"          # auto면 환경마다 달라짐
 disableThemeToggle = false
 
-#개발 메뉴
+[params.widgets]
+# 홈(목록) 화면 우측 위젯
+homepage = [
+  { type = "search" },
+  { type = "archives", params = { limit = 10 } },
+  { type = "categories", params = { limit = 20 } },
+  { type = "tag-cloud", params = { limit = 30 } }
+]
+
+# 글 상세(싱글) 화면 우측 위젯
+page = [
+  { type = "toc" },
+  { type = "search" },
+  { type = "categories", params = { limit = 10 } },
+  { type = "tag-cloud", params = { limit = 20 } },
+]
+
+[[menu.main]]
+name = "HOME"
+url = "/"
+weight = 1
+identifier = "home"
+  [menu.main.params]
+  icon = "home"
+
 [[menu.main]]
 name = "개발"
 url = "/dev/"
-weight = 1
+weight = 2
+identifier = "dev"
+  [menu.main.params]
+  icon = "categories"
 
 [[menu.main]]
 name = "C#"
 url = "/dev/csharp/"
-parent = "개발"
-weight = 1
+weight = 21
+parent = "dev"
+  [menu.main.params]
+  icon = "chevron-right"
 
 [[menu.main]]
 name = "Hugo"
 url = "/dev/hugo/"
-parent = "개발"
-weight = 2
+weight = 22
+parent = "dev"
+  [menu.main.params]
+  icon = "chevron-right"
 
-#여행 메뉴
 [[menu.main]]
 name = "여행"
 url = "/travel/"
-weight = 2
-
-#기타
-[[menu.main]]
-name = "기타"
-url = "/notes/"
 weight = 3
+identifier = "travel"
+  [menu.main.params]
+  icon = "categories"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
