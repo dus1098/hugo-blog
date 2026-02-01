@@ -1,0 +1,35 @@
+/* Light = Cloud Dancer */
+:root[data-scheme="light"] {
+  --body-background: #F0EEE9;      /* 페이지 배경 */
+  --accent-color: #2F6364;         /* 포인트(링크/버튼 등) */
+  --tag-background: rgba(47, 99, 100, 0.14);
+    
+  /* 카드(panel) */
+  --card-background: #FFFFFF; /* 카드만 또렷 */
+  --card-border: rgba(47, 99, 100, 0.12);
+  --card-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+
+  /* 보조 영역 */
+  --secondary-background: #F6F5F2;
+
+  /* 포인트 */
+  --accent-color: #2F6364;
+}
+
+/* Dark = Transformative Teal */
+:root[data-scheme="dark"] {
+  --body-background: #2F6364;      /* 페이지 배경 */
+  --accent-color: #F0EEE9;         /* 포인트(대비 확보) */
+  --tag-background: rgba(240, 238, 233, 0.14);
+
+    /* 카드(panel) */
+  --card-background: #264F50; /* 배경보다 한 톤 어두움 */
+  --card-border: rgba(240, 238, 233, 0.14);
+  --card-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  
+  /* 보조 영역 */
+  --secondary-background: #295859;
+
+  /* 포인트 */
+  --accent-color: #F0EEE9;
+}

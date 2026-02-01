@@ -6,7 +6,8 @@ theme = "hugo-theme-stack"
 
 [params]
 defaultTheme = "dark"          # auto면 환경마다 달라짐
-disableThemeToggle = false
+disableThemeToggle = true
+mainSections = ["dev", "travel"]
 
 [params.widgets]
 # 홈(목록) 화면 우측 위젯
@@ -42,22 +43,6 @@ identifier = "dev"
   icon = "categories"
 
 [[menu.main]]
-name = "C#"
-url = "/dev/csharp/"
-weight = 21
-parent = "dev"
-  [menu.main.params]
-  icon = "chevron-right"
-
-[[menu.main]]
-name = "Hugo"
-url = "/dev/hugo/"
-weight = 22
-parent = "dev"
-  [menu.main.params]
-  icon = "chevron-right"
-
-[[menu.main]]
 name = "여행"
 url = "/travel/"
 weight = 3
@@ -68,3 +53,4 @@ identifier = "travel"
 [taxonomies]
 tag = "tags"
 category = "categories"
+
